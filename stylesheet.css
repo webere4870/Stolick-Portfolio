@@ -1,0 +1,106 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+:root
+{
+    --mainBackground: #232931;
+    --lightBackground: #393E46;
+    --accent1: #4ECCA3;
+    --darkAccent: #40a784;
+    --accent2: #EEEEEE;
+}
+
+body
+{
+    min-height: 100vh;
+    width: 100vw;
+    background: var(--lightBackground);
+}
+
+.colFlex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rowFlex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageFlex
+{
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.navigation
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background: var(--accent1);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.navigation a{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.navigation a:hover
+{
+    background: var(--darkAccent);
+}
+
+.hamburger i
+{
+    font-size: 28px;
+    z-index: 10;
+}
+
+.hamburger
+{
+    height: 45px;
+    width: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px)
+{
+
+}
+
+@media screen and (max-width: 768px)
+{
+    
+}
+
+@media screen and (max-width: 480px)
+{
+    
+}
