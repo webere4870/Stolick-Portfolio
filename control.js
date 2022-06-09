@@ -1,4 +1,9 @@
-$('.hamburger').click((evt)=>
+$().ready(()=>
 {
-    $('.mobileNavigation').slideToggle(400)
+    $('.hamburger').on('click',(evt)=>
+    {
+
+        evt.stopPropagation()
+        $(".mobileNavigation").slideToggle(1000);
+    })
 })
