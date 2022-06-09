@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
     color: white;
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: .3s;
+    font-family: 'Poiret One', cursive;
 }
 
 :root
@@ -52,6 +56,9 @@ body
     height: 60px;
     width: 100%;
     background: var(--accent1);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 a
@@ -65,7 +72,7 @@ a
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .navigation a:hover
@@ -85,9 +92,33 @@ a
     width: 45px;
     background: white;
     border-radius: 50%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    box-shadow: 0 0 5px white;
+}
+
+.hamburger:hover
+{
+    cursor: pointer;
+    box-shadow: 0 0 15px white;
+}
+
+.navigation a{
+    font-size: 22px;
+}
+
+.mobileNavigation
+{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 1024px)
@@ -97,7 +128,15 @@ a
 
 @media screen and (max-width: 768px)
 {
-    
+    .navigation
+    {
+        display: none;
+    }
+
+    .hamburger
+    {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 480px)
