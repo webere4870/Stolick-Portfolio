@@ -44,6 +44,11 @@ body
     background-position: center;
     min-height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
 
 .colFlex
@@ -78,6 +83,7 @@ body
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 a
@@ -181,6 +187,117 @@ a
     flex-direction: column;
     background: var(--mainBackground);
     padding: 40px 0;
+}
+
+.knockout 
+{
+    background-color: white;
+    color: black;
+    font-size: 10vw;    /* Responsive font size */
+    font-weight: bold;
+    margin: 0 auto;     /* Center the text container */
+    padding: 20px;
+    width: 50%;
+    text-align: center; /* Center text */
+    mix-blend-mode: screen;             /* This makes the cutout text possible */
+}
+
+#iconRow
+{
+
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 25px;
+}
+
+#iconRow > a
+{
+    margin: 5px;
+}
+
+.offColor
+{
+    color: var(--accent1);
+}
+
+
+.quoteClass
+{
+    font-size: 40px;
+    font-style: italic;
+}
+
+.iconBubble
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    transition-property: all;
+    transition-duration: .1s;
+    transition-timing-function: linear;
+    background: var(--accent1);
+}
+
+.iconBubble:hover
+{
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+
+.upright
+{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-weight: bold;
+    transform: rotate(180deg);
+    font-size: 70px;
+}
+
+.btn{
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 28px;
+    font-weight: bolder;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+    box-shadow: 0 0 5px white;
+}
+
+.btn1{
+    background: var(--accent1);
+}
+
+.btn2{
+    background: white;
+    color: var(--accent1);
+}
+
+.btnRow
+{
+    margin-top: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+}
+
+.btnRow .btn{
+    margin: 8px;
+}
+
+.btn:hover
+{
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1024px)
