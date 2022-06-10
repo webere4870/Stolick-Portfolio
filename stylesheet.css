@@ -10,18 +10,40 @@
 :root
 {
     --mainBackground: #232931;
+    --mainGradient: rgba(35,41,49, .7);
     --lightBackground: #393E46;
     --accent1: #4ECCA3;
     --darkAccent: #40a784;
     --accent2: #EEEEEE;
 }
 
+.navigation a:hover
+{
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: .4s;
+}
+
+body,html
+{
+    overflow-x: hidden;
+}
+
 body
 {
     min-height: 100vh;
     width: 100vw;
-    background: var(--lightBackground);
     position: relative;
+}
+
+#homePage
+{
+    background: radial-gradient(rgba(0,0,0,.4), var(--mainBackground)), url('./images/study.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100vw;
 }
 
 .colFlex
@@ -53,7 +75,6 @@ body
     align-items: center;
     height: 60px;
     width: 100%;
-    background: var(--accent1);
     position: absolute;
     top: 0;
     left: 0;
@@ -75,7 +96,7 @@ a
 
 .navigation a:hover
 {
-    background: var(--darkAccent);
+    color: var(--accent1);
 }
 
 .hamburger i
@@ -138,6 +159,28 @@ a
 .relative
 {
     position: relative;
+}
+
+.contactStrip
+{
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--accent1);
+    padding: 30px;
+
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--mainBackground);
+    padding: 40px 0;
 }
 
 @media screen and (max-width: 1024px)
