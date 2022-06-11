@@ -300,6 +300,105 @@ a
     cursor: pointer;
 }
 
+.formCover
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height: fit-content;
+    width: fit-content;
+}
+
+.contactForm
+{
+
+    display: table;
+    row-gap: 10px;
+}
+
+.tableRow
+{
+    display: table-row;
+    margin: 10px;
+}
+
+.contactForm input, .contactForm label, .contactForm textarea
+{
+    display: table-cell;
+    vertical-align: top;
+    margin: 0 10px;
+    margin-top: 10px;
+    z-index: 3;
+    
+}
+
+.contactForm input, .contactForm textarea{
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-size: 17px;
+    padding: 8px;
+}
+
+.contactForm input{
+    height: 25px;
+}
+
+.contactForm label{
+    transform: translateY(10px);
+}
+
+
+.tableRow{
+    padding: 10px;
+}
+
+.contactForm input, .contactForm textarea
+{
+    width: 300px;
+}
+
+.contactForm label{
+    text-align: right;
+}
+
+.formBtn{
+    width: 100%;
+    display: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitBtn
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width: 1024px)
 {
 
