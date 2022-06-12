@@ -78,7 +78,7 @@ body
 {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     height: 60px;
     width: 100%;
@@ -88,9 +88,86 @@ body
     z-index: 1;
 }
 
+.course
+{
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    position: relative;
+    box-shadow: 0 0 20px black;
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: .3s;
+}
+
+.course:hover{
+    box-shadow: 0 0 30px black;
+}
+
+.course img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.courseSide
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    padding: 15px;
+}
+
+.courseSide > *
+{
+    margin: 5px 0;
+}
+
+.courseSide *{
+    color: black;
+}
+
+.courseSide h2{
+    color: white;
+}
+
+.courseSide button
+{
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    background: var(--accent1);
+    border-radius: 5px;
+    font-size: 18px;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+    box-shadow: 0 0 5px gray;
+    margin: 5px 0;
+}
+
+.courseSide h1
+{
+    font-size: 36;
+}
+
 a
 {
     text-decoration: none;
+}
+
+.courseSide button:hover
+{
+    cursor: pointer;
+    box-shadow: 0 0 15px gray;
 }
 
 .navigation a{
@@ -198,9 +275,6 @@ a
     padding: 40px 0;
 }
 
-.footer > *{
-    transform: translateX(17px);
-}
 
 .footerCategory
 {
@@ -493,6 +567,35 @@ a
     .hamburger
     {
         display: flex;
+    }
+
+    .course
+    {
+        width: 400px;
+        height: 150px;
+    }
+
+    
+    .course img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .courseSide
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        padding: 15px;
+    }
+
+    .courseSide p{
+        display: none;
     }
 }
 
