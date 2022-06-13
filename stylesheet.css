@@ -295,6 +295,12 @@ a
     color: var(--accent1);
 }
 
+#root
+{
+    height: 200px;
+    width: 200px;
+}
+
 .knockout 
 {
     background-color: white;
