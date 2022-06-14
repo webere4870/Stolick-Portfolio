@@ -1,22 +1,34 @@
 const e = React.createElement;
-class LikeButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { liked: false };
+class CourseMaterial extends React.Component {
+  constructor(props)
+  {
+    super(props)
+    this.state = {activeCourse: "Temporary"}
   }
-  render() {
-    if (this.state.liked) {
-      return 'You liked this.';
-    }
-
+  render()
+  {
     return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
-    );
+      'div',
+      {className: "tester", onClick: ()=>console.log("This worked")},
+      'Content here mate'
+    )
   }
 }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { liked: false };
+  // }
+  // render() {
+  //   if (this.state.liked) {
+  //     return 'You liked this.';
+  //   }
 
-const domContainer = document.querySelector('#like_button_container');
+  //   return e(
+  //     'button',
+  //     { onClick: () => this.setState({ liked: true })},
+  //     'Like'
+  //   );
+
+const domContainer = document.querySelector('#root');
 const root = ReactDOM.createRoot(domContainer);
-root.render(e(LikeButton));
+root.render(e(CourseMaterial));

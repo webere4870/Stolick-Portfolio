@@ -16,6 +16,15 @@ $().ready(()=>
     {
         $('.formCover').toggle(500)
     })
+    $('.backBtn').click((evt)=>
+    {
+        history.back()
+    })
+
+    $(".iframe").click((evt)=>
+    {
+        $(`.${evt.target.id}`).toggle(400)
+    })
 })
 
 let latitude = 41.037660;

@@ -301,6 +301,11 @@ a
     width: 200px;
 }
 
+.tester
+{
+    background: purple;
+}
+
 .knockout 
 {
     background-color: white;
@@ -425,6 +430,74 @@ a
     position: absolute;
     bottom: 15px;
     right: 25px;
+}
+#coursePage{
+    background: radial-gradient(rgba(0,0,0,.4), var(--mainBackground)), url('./images/study.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#coursePage iframe
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    display: none;
+}
+
+.iframe
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 250px;
+    background: var(--accent1);
+    border-radius: 10px;
+    transition-duration: .3s;
+    transition-property: all;
+    transition-timing-function: linear;
+    position: relative;
+}
+
+.toolTip
+{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: black;
+    position: absolute;
+    visibility: hidden;
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: .3s;
+}
+
+.iframe:hover > .toolTip{
+    visibility: visible;
+}
+
+.backBtn
+{
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: .3s;
+}
+
+.backBtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 15px gray;
 }
 
 .btnRow .btn{
