@@ -27,6 +27,11 @@ $().ready(()=>
     })
 })
 
+$(window).ready(()=>
+{
+    $('.preloader').fadeOut(500)
+})
+
 let latitude = 41.037660;
 let longitude = -83.649540;
 let mymap = L.map('mapid', {tap: false}).setView([latitude, longitude], 13);

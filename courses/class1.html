@@ -21,6 +21,17 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="preloader">
+        <div class="wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <span>Loading</span>
+        </div>
+    </div>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <!-- Load our React component. -->
@@ -86,15 +97,18 @@
     </div>
     <div id="coursePage">
         <iframe
-            class="class1"
+            class="class1 courses"
             src="https://drive.google.com/file/d/1_SXYcRkIRWMap5jnKuF8WIXzbXK8d1KV/preview?usp=embed_googleplus"
             frameBorder="0"
             scrolling="auto"
         ></iframe>
+        <h1>Files</h1>
         <div id="class1" class="iframe">
             <h1>Toggle Iframe</h1>
             <div class="toolTip"></div>
         </div>
+        <h1>Videos</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XjHhtWL_3Og" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div id="iconRow">
             <div class="backBtn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
