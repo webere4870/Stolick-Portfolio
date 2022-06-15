@@ -164,6 +164,40 @@ a
     text-decoration: none;
 }
 
+.afterUnderline
+{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.afterUnderline::after
+{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20%;
+    width: 60%;
+    height: 2px;
+    background: var(--accent1);
+}
+
+#circleBox
+{
+    display: none;
+}
+
+.ethics
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    width: 400px;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
 .courseSide button:hover
 {
     cursor: pointer;
@@ -612,6 +646,16 @@ a
     left:15%;
 }
 
+#slideShowRow
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
 .slideshow-container {
     max-width: 300px;
     position: relative;
@@ -826,6 +870,12 @@ a
 
 @media screen and (max-width: 768px)
 {
+    .ethics
+    {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
     .contactStrip{
         flex-direction: column;
         justify-content: center;
