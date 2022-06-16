@@ -163,6 +163,34 @@ a
 {
     text-decoration: none;
 }
+#carrot
+{
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: .15s;
+}
+
+#dropDown, #dropDown2
+{
+    position: relative;
+}
+
+.dropDownMenu
+{
+    position: absolute;
+    top: 110%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    display: none;
+}
+
+.rotated
+{
+    transform: rotate(90deg);
+}
 
 .afterUnderline
 {
@@ -271,6 +299,7 @@ a
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 5px );
     -webkit-backdrop-filter: blur( 5px );
+    gap: 10px;
 }
 
 .mobileNavigation{
