@@ -53,6 +53,22 @@ body
     position: relative;
 }
 
+/* #whiteCut
+{
+    width: 100vw;
+    height: 50vh;
+    background: var(--accent1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} */
+
+#homePage > svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 .colFlex
 {
     display: flex;
