@@ -69,6 +69,79 @@ body
     left: 0;
 }
 
+#portrait
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    background: var(--mainBackground);
+    box-shadow: 0 0 20px gray;
+    z-index: 1;
+}
+
+#portrait img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.container{
+    width: 60%;
+    margin: 1rem auto;
+    padding: 2rem;
+    text-align: justify;
+    transition: all 0.3s;
+}
+.container p{
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    word-spacing: 2px;
+}
+
+.container p:first-child::first-letter{
+    color: var(--accent1);
+    font-weight: bold;
+    font-size: 70px;
+    float: left;
+    line-height: 60px;
+    padding-right: 8px;
+    margin-top: -3px;
+}
+
+#followPage *{
+    color: black;
+}
+
+.colorStrip
+{
+    background: var(--lightBackground);
+    width: 100vw;
+    min-height: 300px;
+}
+
+#degrees
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    gap: 100px;
+}
+
+.degree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
 .colFlex
 {
     display: flex;
@@ -915,6 +988,15 @@ a
 
 @media screen and (max-width: 768px)
 {
+    .colorStrip
+    {
+        padding: 40px 0;
+    }
+    #degrees
+    {
+        flex-direction: column;
+        gap: 30px;
+    }
     .ethics
     {
         justify-content: center;
