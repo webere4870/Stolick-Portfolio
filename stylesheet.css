@@ -23,6 +23,10 @@ body,html
     overflow-x: hidden;
 }
 
+body{
+    overflow-y: hidden;
+}
+
 body
 {
     min-height: 100vh;
@@ -47,7 +51,53 @@ body
     position: relative;
 }
 
+#booksPage
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--mainBackground);
+    height: 70vh;
+    width: 100vw;
+    position: relative;
+}
 
+#booksFollow
+{
+    background: white;
+    min-height: 30vh;
+    width: 100vw;
+    box-shadow: 0 0 20px white;
+    transform: translateY(-20px);
+}
+
+#blob
+{
+    height: 1600px;
+    width: 1600px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -50%;
+    background: var(--accent2);
+    z-index: -1;
+}
+
+.ethics h1, .ethics p
+{
+    color: black;
+}
+
+#ethicsPage
+{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
 
 /* #whiteCut
 {
@@ -63,6 +113,11 @@ body
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+.styleEthics{
+    z-index: -2;
+    background: white;
 }
 
 #portrait
@@ -184,14 +239,14 @@ body
     backdrop-filter: blur( 5px );
     -webkit-backdrop-filter: blur( 5px );
     position: relative;
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 10px gray;
     transition-property: all;
     transition-timing-function: linear;
     transition-duration: .3s;
 }
 
 .course:hover{
-    box-shadow: 0 0 30px black;
+    box-shadow: 0 0 20px gray;
 }
 
 .course img{
@@ -271,6 +326,8 @@ a
     align-items: flex-start;
     flex-direction: column;
     display: none;
+    background: var(--accent1);
+    padding: 10px;
 }
 
 .rotated
@@ -310,6 +367,7 @@ a
     width: 400px;
     animation-name: fade;
     animation-duration: 1.5s;
+    margin-left: 50px;
 }
 
 .courseSide button:hover
@@ -621,6 +679,7 @@ a
     position: relative;
 }
 
+
 #coursePage .courses
 {
     position: fixed;
@@ -774,6 +833,12 @@ a
     gap: 20px;
 }
 
+.teachingRow2{
+    transform: translateY(-100px);
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
 .teachingCard{
     display: flex;
     justify-content: center;
@@ -786,6 +851,7 @@ a
     box-shadow: 0 0 10px gray;
     position: relative;
     gap: 10px;
+    background: white;
 }
 
 .teachingCard p{
@@ -805,11 +871,16 @@ a
 
 #specialNav a
 {
-    color: var(--accent1);
-    font-weight: 800;
+    color: white;
     transition-property: all;
     transition-timing-function: linear;
     transition-duration: .5s;
+}
+
+.ethics p
+{
+    color: black;
+    z-index: 1;
 }
 
 #specialNav a:hover{
@@ -830,6 +901,10 @@ a
 {
     color: black;
     font-weight: 500;
+}
+
+.course h2{
+    color: black;
 }
 
 @keyframes shadow{
@@ -868,17 +943,25 @@ a
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    width: 100vw;
+    height: 100vh;
+    gap: 40px;
+    
 }
 
 
 .slideshow-container {
     max-width: 300px;
     position: relative;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
+  .slideshow-container img
+  {
+    box-shadow: 0 0 20px gray;
+    border-radius: 10px;
+  }
   /* Hide the images by default */
   .mySlides {
     display: none;
@@ -1034,6 +1117,13 @@ a
     
 }
 
+
+
+.coursePage
+{
+    background: white;
+}
+
 .contactForm input, .contactForm textarea{
     border-radius: 5px;
     border: none;
@@ -1086,13 +1176,30 @@ a
         height: 200px;
         width: 200px;
     }
+    .teachingRow2 .teachingCard{
+        width: 250px;
+        height: 250px;
+    }
 }
 
 @media screen and (max-width: 768px)
 {
+    #slideShowRow
+    {
+        flex-direction: column;
+        margin-top: 80px;
+    }
+
+    #blob{
+        height: 600px;
+        width: 600px;
+    }
     .teachingRow
     {
         flex-direction: column;
+    }
+    .teachingRow2{
+        flex-direction: row;
     }
     .teachingCard{
         width: 250px;
@@ -1179,7 +1286,7 @@ a
     }
 }
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 500px)
 {
     
 }
