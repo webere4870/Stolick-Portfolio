@@ -17,12 +17,6 @@
     --accent2: #EEEEEE;
 }
 
-.navigation a:hover
-{
-    transition-property: all;
-    transition-timing-function: linear;
-    transition-duration: .4s;
-}
 
 body,html
 {
@@ -177,6 +171,7 @@ body
     top: 0;
     left: 0;
     z-index: 1;
+    background: var(--accent1);
 }
 
 .course
@@ -330,11 +325,14 @@ a
     justify-content: center;
     align-items: center;
     padding: 0 20px;
+    transition-timing-function: linear;
+    transition-duration: .3s;
+    transition-property: all;
 }
 
 .navigation a:hover
 {
-    color: var(--accent1);
+    color: black;
 }
 
 .hamburger i
@@ -569,6 +567,30 @@ a
     box-shadow: 0 0 5px white;
 }
 
+.pillBtn
+{
+    background-color: var(--accent1);
+    border: none;
+    color: white;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 17px;
+
+    box-shadow: 0 0 6px gray;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+}
+
+.pillBtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px gray;
+}
+
 .btn1{
     background: var(--accent1);
 }
@@ -740,6 +762,47 @@ a
     background: white;
 }
 
+#teachingPage h1{
+    color: black;
+}
+
+.teachingRow
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.teachingCard{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    height: 250px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px gray;
+    position: relative;
+    gap: 10px;
+}
+
+.teachingCard p{
+    color: black;
+}
+
+.teachingCard .stripe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--lightBackground);
+    width: 100%;
+    height: 30px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
 #specialNav a
 {
     color: var(--accent1);
@@ -761,6 +824,12 @@ a
 
 .specialHam:hover{
     box-shadow: 0 0 20px gray;
+}
+
+.specialMobile a
+{
+    color: black;
+    font-weight: 500;
 }
 
 @keyframes shadow{
@@ -1013,11 +1082,26 @@ a
 
 @media screen and (max-width: 1024px)
 {
-
+    .teachingCard{
+        height: 200px;
+        width: 200px;
+    }
 }
 
 @media screen and (max-width: 768px)
 {
+    .teachingRow
+    {
+        flex-direction: column;
+    }
+    .teachingCard{
+        width: 250px;
+        height: 250px;
+    }
+    .teachingArrow
+    {
+        transform: rotate(90deg);
+    }
     .colorStrip
     {
         padding: 40px 0;
