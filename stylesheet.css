@@ -53,6 +53,8 @@ body
     position: relative;
 }
 
+
+
 /* #whiteCut
 {
     width: 100vw;
@@ -731,6 +733,34 @@ a
     left:15%;
     filter: blur(1px);
     animation: shadow .5s alternate infinite ease;
+}
+
+#teachingPage
+{
+    background: white;
+}
+
+#specialNav a
+{
+    color: var(--accent1);
+    font-weight: 800;
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: .5s;
+}
+
+#specialNav a:hover{
+    color: black;
+}
+
+.specialHam
+{
+    background: gray;
+    box-shadow: 0 0 10px gray;
+}
+
+.specialHam:hover{
+    box-shadow: 0 0 20px gray;
 }
 
 @keyframes shadow{
