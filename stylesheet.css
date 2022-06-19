@@ -71,6 +71,72 @@ body
     transform: translateY(-20px);
 }
 
+#publishedPage
+{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: var(--mainBackground);
+    overflow: hidden;
+}
+
+#whiteFollow
+{
+    min-height: 100vh;
+    width: 100vw;
+    background: white;
+}
+
+#whiteFollow h1{
+    color: black;
+}
+
+#whiteFollow img{
+    width: 30%;
+}
+
+#rect1
+{
+    background: white;
+    box-shadow: 0 0 20px white;
+    width: 120vw;
+    height: 35vh;
+    position: absolute;
+    top: -15vh;
+    left: -10vw;
+    transform: rotate(-5deg);
+}
+
+#rect2
+{
+    background: white;
+    box-shadow: 0 0 20px white;
+    width: 120vw;
+    height: 35vh;
+    position: absolute;
+    bottom: -15vh;
+    left: -10vw;
+    transform: rotate(-5deg);
+}
+
+#forTheBag
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#svgTurned
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -24px;
+    transform: rotate(5deg);
+}
+
 #blob
 {
     height: 1600px;
@@ -151,6 +217,7 @@ body
     line-height: 1.5;
     letter-spacing: 0.3px;
     word-spacing: 2px;
+    color: black;
 }
 
 .container p:first-child::first-letter{
@@ -227,6 +294,7 @@ body
     left: 0;
     z-index: 1;
     background: var(--accent1);
+    box-shadow: 0 0 25px gray;
 }
 
 .course
@@ -666,10 +734,11 @@ a
     right: 25px;
 }
 #coursePage{
-    background: radial-gradient(rgba(0,0,0,.4), var(--mainBackground)), url('./images/study.jpeg');
+    /* background: radial-gradient(rgba(0,0,0,.4), var(--mainBackground)), url('./images/study.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+    background: var(--mainBackground);
     min-height: 100vh;
     width: 100vw;
     display: flex;
@@ -677,6 +746,28 @@ a
     align-items: center;
     flex-direction: column;
     position: relative;
+}
+
+#upperPara
+{
+    position: absolute;
+    background: white;
+    clip-path: polygon(0% 0%, 0% 30%, 100% 20%, 100% 0%);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+#lowerPara
+{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: white;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 70%, 0% 80%);
 }
 
 
