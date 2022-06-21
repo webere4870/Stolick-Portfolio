@@ -71,6 +71,48 @@ body
     transform: translateY(-20px);
 }
 
+#unpublishedPage
+{
+    background: radial-gradient(rgba(0,0,0,.4), var(--mainBackground)), url('./images/study.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#centerClear
+{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 0 15px gray;
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    position: relative;
+    width: 80vw;
+    height: fit-content;
+    z-index: 1;
+}
+#unpublishedPage svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+.wfFlex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
 #publishedPage
 {
     height: 100vh;
