@@ -13,6 +13,7 @@
     --mainGradient: rgba(35,41,49, .7);
     --lightBackground: #393E46;
     --accent1: #4ECCA3;
+    --accentGradient: rgba(78, 204, 163, .6);
     --darkAccent: #40a784;
     --accent2: #EEEEEE;
 }
@@ -94,14 +95,51 @@ body
     -webkit-backdrop-filter: blur( 5px );
     position: relative;
     width: 80vw;
-    height: fit-content;
+    min-height: 60vh;
     z-index: 1;
+    padding: 30px;
 }
 #unpublishedPage svg{
     position: absolute;
     bottom: 0;
     left: 0;
 
+}
+
+.imageLines
+{
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+}
+
+
+.imageLines::before
+{
+    content: '';
+    position: absolute;
+    background: var(--accent1);
+    top: 0;
+    left: -10px;
+    width: 2px;
+    height: 30%;
+}
+
+.imageLines img{
+    height: 100%;
+    width: 100%;
+}
+
+.imageLines::after
+{
+    content: '';
+    position: absolute;
+    background: var(--accent1);
+    bottom: 0;
+    right: -10px;
+    width: 2px;
+    height: 30%;
+    z-index: 15;
 }
 
 .wfFlex
@@ -111,7 +149,22 @@ body
     align-items: center;
     height: 100%;
     width: 100%;
+    gap: 30px;
+
+    padding: 30px 0;
 }
+
+.rightAlignBlock
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 50%;
+    position: relative;
+}
+
+
 
 #publishedPage
 {
@@ -133,9 +186,6 @@ body
     color: black;
 }
 
-#whiteFollow img{
-    width: 30%;
-}
 
 #rect1
 {
@@ -206,6 +256,56 @@ body
     flex-direction: column;
     position: relative;
 }
+
+
+#ethicsPage1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(rgba(0,0,0,.4), var(--mainBackground)), url('./images/study.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+#leftHalf, #rightHalf
+{
+    width: 50vw;
+    height: 100vh;
+}
+
+
+#leftHalf
+{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 0 15px gray;
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+}
+
+#innerLeft
+{
+    height: fit-content;
+    width: fit-content;
+    max-width: 80%;
+    padding: 40px;
+}
+
+#innerRight
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    width: 70%;
+    background: var(--accentGradient);
+    padding: 30px;
+}
+
 
 /* #whiteCut
 {
@@ -639,6 +739,10 @@ a
     mix-blend-mode: screen;             /* This makes the cutout text possible */
 }
 
+#whiteFollow img{
+    width: 30%;
+}
+
 #iconRow
 {
 
@@ -747,7 +851,7 @@ a
     cursor: pointer;
     border-radius: 16px;
     font-size: 17px;
-
+    margin: 0px 5px;
     box-shadow: 0 0 6px gray;
     transition-property: all;
     transition-duration: .3s;
@@ -1303,6 +1407,11 @@ a
     align-items: center;
 }
 
+.imageLines img{
+    height: 400px;
+    width: 400px;
+}
+
 @media screen and (max-width: 1024px)
 {
     .teachingCard{
@@ -1317,6 +1426,28 @@ a
 
 @media screen and (max-width: 768px)
 {
+    #ethicsPage1
+    {
+        flex-direction: column;
+        background: radial-gradient(rgba(0,0,0,.4), var(--mainBackground)), url('./images/study.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    #leftHalf, #rightHalf
+    {
+        width: 100vw;
+    }
+    .wfFlex
+    {
+        flex-direction: column;
+    }
+    .rightAlignBlock
+    {
+        justify-content: center;
+        align-items: center;
+    }
     #slideShowRow
     {
         flex-direction: column;
