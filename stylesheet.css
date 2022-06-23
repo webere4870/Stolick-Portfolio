@@ -12,7 +12,7 @@
     --mainBackground: #232931;
     --mainGradient: rgba(35,41,49, .7);
     --lightBackground: #393E46;
-    --accent1: #4ECCA3;
+    --accent1: #6610f2;
     --accentGradient: rgba(78, 204, 163, .6);
     --darkAccent: #40a784;
     --accent2: #EEEEEE;
@@ -51,6 +51,68 @@ body
     flex-direction: column;
     position: relative;
 }
+
+#extraPage
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+#triangleDiv
+{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: 50vh;
+    width: 50vh;
+    left: 0px;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    background: var(--accent1);
+}
+
+#triangleDiv svg
+{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+#materialsPage
+{
+    background: white;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+#topper
+{
+    background: var(--accent1);
+    min-height: 50vh;
+    width: 100vw;
+}
+
+#topper svg
+{
+    opacity: .4;
+    position: absolute;
+    
+}
+
+#bottomer
+{
+    min-height: calc(50vh - 60px);
+    width: 100vw;
+    box-shadow: 0 0 15px gray;
+    z-index: 1;
+}
+
 
 #booksPage
 {
@@ -436,7 +498,7 @@ body
     left: 0;
     z-index: 1;
     background: var(--accent1);
-    box-shadow: 0 0 25px gray;
+    box-shadow: 0 0 15px rgb(70, 70, 70);
 }
 
 .course
@@ -475,6 +537,22 @@ body
     right: 0;
     width: 400px;
     padding: 15px;
+}
+
+.coursesRow
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+}
+
+#topper svg{
+    position: absolute;
+    left: 60vw;
+    bottom: -50px;
 }
 
 .courseSide > *
@@ -1426,6 +1504,14 @@ a
 
 @media screen and (max-width: 768px)
 {
+    #triangleDiv
+    {
+        top: 0px;
+    }
+    #bottomer
+    {
+        min-height: 50vh;
+    }
     #ethicsPage1
     {
         flex-direction: column;
@@ -1513,6 +1599,11 @@ a
     .navigation
     {
         display: none;
+    }
+
+    #materialsPage
+    {
+        margin-top: 0;
     }
 
     .hamburger
