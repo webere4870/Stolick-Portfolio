@@ -549,6 +549,30 @@ body
     width: 100%;
 }
 
+.innerSlide
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition-timing-function: linear;
+    transition-duration: .3s;
+    transition-property: all;
+}
+
+.sliderProperty
+{
+    transform: translateX(-200px);
+}
+
+.slideBox
+{
+    height: 200px;
+    width: 200px;
+    background: green;
+    border: 2px solid black;
+}
+
 #topper svg{
     position: absolute;
     left: 60vw;

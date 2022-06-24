@@ -54,6 +54,13 @@ $().ready(()=>
       $("#dd3").toggle(300)
       $('#carrot3').toggleClass("rotated", 300)
     })
+
+    $('#swapper').click((evt)=>
+    {
+        //$('.innerSlide').toggleClass("sliderProperty")
+        $('.innerSlide').css("transform", "translateX(200px)")
+        let pixelValue = document.querySelectorAll(".innerSlide")[0].style.transform
+    })
 })
 
 $(window).ready(()=>
