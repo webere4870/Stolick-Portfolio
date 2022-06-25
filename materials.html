@@ -18,6 +18,25 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+        .swiper-button-next
+        {
+            position: absolute;
+            right: 30px;
+        }
+        @media screen and (max-width: 500px)
+        {
+            .swiper-button-next{
+                right: 15px;
+            }
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -106,6 +125,18 @@
               </svg>
         </div>
         <div id="bottomer" class="colFlex">
+            <div id="swiperRef" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 4</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
             <div class="coursesRow">
                 <div class="course">
                     <img src="./images/book.jpg" alt="">
@@ -180,6 +211,59 @@
             </div>
             <p style="text-align: center;">&copy; 2022 Matthew Stolick <br>Built by Eli Weber</p>
     </div> 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        centeredSlides: true,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var appendNumber = 5;
+      var prependNumber = 1;
+      document
+        .querySelector(".prepend-2-slides")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          swiper.prependSlide([
+            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+          ]);
+        });
+      document
+        .querySelector(".prepend-slide")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          swiper.prependSlide(
+            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+          );
+        });
+      document
+        .querySelector(".append-slide")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          swiper.appendSlide(
+            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+          );
+        });
+      document
+        .querySelector(".append-2-slides")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          swiper.appendSlide([
+            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+          ]);
+        });
+    </script>
     <script src="./control.js">
 
     </script>

@@ -13,7 +13,7 @@
 }
 .glider > div{
   height: 250px;
-  width: ;
+  width: 500px;
 }
 .glider-track {
   transform: translateZ(0);
