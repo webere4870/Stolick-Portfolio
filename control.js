@@ -57,10 +57,17 @@ $().ready(()=>
 
     $('#swapper').click((evt)=>
     {
-        document.querySelectorAll('.innerSlide .slideBox')[0].style.display="no"
-        //$('.innerSlide').toggleClass("sliderProperty")
-        //$('.innerSlide').css("transform", "translateX(200px)")
-        /*let pixelValue = document.querySelectorAll(".innerSlide")[0].style.transform
+        //document.querySelectorAll('.innerSlide .slideBox')[0].style.display="no"
+        $('.innerSlide').toggleClass("sliderProperty")
+        $('.innerSlide').css("transform", "translateX(200px)")
+        let pixelValue = document.querySelectorAll(".innerSlide")[0].style.transform
+        let temp = $('.innerSlide .slideBox:nth-of-type(1)')
+        $('.innerSlide .slideBox:nth-of-type(1)').toggle(400, ()=>
+        {
+            $('.innerSlide .slideBox:nth-of-type(1)').remove()
+            temp.css("display", "none")
+            
+        })
         let newValue = ""
         for(let counter = 0; counter < pixelValue.length; counter++)
         {
@@ -72,13 +79,13 @@ $().ready(()=>
         let newPixels = 0
         if(newValue)
         {
-            newPixels = 200
+            newPixels = 400
         }
         else
         {
-            newPixels = parseInt(newValue) + 200
+            newPixels = parseInt(newValue) + 400
         }
-        */
+        
     })
 })
 

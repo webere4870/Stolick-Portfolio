@@ -111,7 +111,9 @@ body
     width: 100vw;
     box-shadow: 0 0 15px gray;
     z-index: 1;
+    padding: 40px 0;
 }
+
 
 
 #booksPage
@@ -559,6 +561,17 @@ body
     transition-duration: .3s;
     transition-property: all;
 }
+
+.swiper {
+    width: 100vw;
+    height: 300px;
+  }
+
+  .swiper-slide{
+    height: 100%;
+    width: 20vw;
+    background: var(--accent1);
+  }
 
 .sliderProperty
 {
@@ -1528,6 +1541,9 @@ a
 
 @media screen and (max-width: 768px)
 {
+    .swiper{
+        width: 150vw;
+    }
     #triangleDiv
     {
         top: 0px;
