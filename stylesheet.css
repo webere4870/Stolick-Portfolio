@@ -667,6 +667,7 @@ body
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 40px;
     width: 100%;
 }
