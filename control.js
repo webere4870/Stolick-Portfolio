@@ -57,9 +57,28 @@ $().ready(()=>
 
     $('#swapper').click((evt)=>
     {
+        document.querySelectorAll('.innerSlide .slideBox')[0].style.display="no"
         //$('.innerSlide').toggleClass("sliderProperty")
-        $('.innerSlide').css("transform", "translateX(200px)")
-        let pixelValue = document.querySelectorAll(".innerSlide")[0].style.transform
+        //$('.innerSlide').css("transform", "translateX(200px)")
+        /*let pixelValue = document.querySelectorAll(".innerSlide")[0].style.transform
+        let newValue = ""
+        for(let counter = 0; counter < pixelValue.length; counter++)
+        {
+            if(Number.isInteger(parseInt(pixelValue[counter])))
+            {
+                newValue += pixelValue[counter]
+            }
+        }
+        let newPixels = 0
+        if(newValue)
+        {
+            newPixels = 200
+        }
+        else
+        {
+            newPixels = parseInt(newValue) + 200
+        }
+        */
     })
 })
 
