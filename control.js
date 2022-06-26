@@ -55,6 +55,11 @@ $().ready(()=>
       $('#carrot3').toggleClass("rotated", 300)
     })
 
+    $('.files').click((evt)=>
+    {
+        console.log("Files clicked")
+    })
+
     $('#swapper').click((evt)=>
     {
         //document.querySelectorAll('.innerSlide .slideBox')[0].style.display="no"
@@ -86,6 +91,27 @@ $().ready(()=>
             newPixels = parseInt(newValue) + 400
         }
         
+    })
+    $('.files').click((evt)=>
+    {
+        $('#fileTable').css("display", "flex");
+        $('#courseContent').toggle(400);
+    })
+
+    $('.videos').click((evt)=>
+    {
+        $('#videoTable').css("display", "flex");
+        $('#courseContent').toggle(400);
+    })
+
+    $('#closer').click((evt)=>
+    {
+
+        $('#courseContent').toggle(400, ()=>
+        {
+            $('#videoTable').css("display", "none");
+            $('#fileTable').css("display", "none");
+        })
     })
 })
 
