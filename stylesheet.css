@@ -13,7 +13,7 @@
     --mainGradient: rgba(35,41,49, .7);
     --lightBackground: #393E46;
     --accent1: #6610f2;
-    --accentGradient: rgba(78, 204, 163, .6);
+    --accentGradient: rgba(86, 78, 204, 0.6);
     --darkAccent: #40a784;
     --accent2: #EEEEEE;
     --custom1: #62fcaf;
@@ -22,6 +22,7 @@
     --custom2Light: #ff7f7f6f;
     --custom3: #89cff0;
     --custom3Light: #89cff06f;
+    --yellow: rgb(242, 235, 31);
 }
 
 
@@ -85,6 +86,23 @@ body
     top: 40px;
     left: 40px;
 }
+
+#svgBubble
+{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #f2f2f2;
+    position: absolute;
+    top: calc(50%-30px);
+    left: calc(50%-30px);
+    box-shadow: 0 0 25px gray;
+}
+
+
 
 #materialsPage
 {
@@ -238,11 +256,118 @@ body
 
 #publishedPage
 {
-    height: 100vh;
+    background: radial-gradient(rgba(0,0,0,.4), var(--mainBackground)), url('./images/study.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
     width: 100vw;
     position: relative;
-    background: var(--mainBackground);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#publishedPage > *{
+    margin-left: 10vw;
+}
+
+#shifty
+{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100px);
+    position: relative;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#someKindOfBlockRow
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.subBlock
+{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px;
+    background: var(--accent1);
+    background: linear-gradient(var(--accentGradient), var(--accentGradient)), url('/images/git.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 25px gray;
+    border-radius: 10px;
+    transition-timing-function: linear;
+    transition-duration: .3s;
+    transition-property: all;
+}
+
+
+
+.subBlock .squareBtn
+{
+    background: white;
+    color: var(--accent1);
+}
+
+#mainBlocker
+{
+    background: var(--mainBackground);
+    box-shadow: 0 0 35px gray;
+    height: 250px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 35px;
+}
+
+.textEffect{
+    color: var(--accent1);
+}
+
+#mainBlocker span{
+    color: var(--accent1);
+    margin-top: 8px;
+}
+
+#accentBlocker
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 35px;
+}
+
+
+#oldYeller{
+    background: var(--yellow);
+    color: black;
+}
+
+#accentBlocker
+{
+    height: 300px;
+    width: 400px;
+    background: var(--accent1);
+    box-shadow: 0 0 30px gray;
 }
 
 #whiteFollow
@@ -250,6 +375,11 @@ body
     min-height: 100vh;
     width: 100vw;
     background: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0 40px 0;
 }
 
 #whiteFollow h1{
@@ -633,7 +763,7 @@ color: #545d7a;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     background: var(--accent1);
     box-shadow: 0 0 15px rgb(70, 70, 70);
 }
@@ -997,15 +1127,19 @@ a
 .dropDownMenu
 {
     position: absolute;
-    top: 110%;
+    top: 160%;
     left: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     display: none;
-    background: var(--accent1);
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 0 15px gray;
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
     padding: 10px;
+    z-index: 0;
 }
 
 .rotated
@@ -1030,6 +1164,22 @@ a
     background: var(--accent1);
 }
 
+.afterUnderlineWhite
+{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.afterUnderlineWhite::after
+{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20%;
+    width: 60%;
+    height: 2px;
+    background: white;
+}
 #circleBox
 {
     display: none;
@@ -1575,6 +1725,12 @@ a
     border-top-right-radius: 12px;
 }
 
+
+#accentBlocker h1{
+    color: white;
+    font-size: 48px;
+}
+
 #specialNav a
 {
     color: white;
@@ -1896,6 +2052,14 @@ a
 
 @media screen and (max-width: 768px)
 {
+    #shifty{
+        gap: 0;
+    }
+    #mainBlocker, #accentBlocker
+    {
+        width: 100vw;
+        min-height: 60vh;
+    }
     #courseContent
     {
         top: 0;
